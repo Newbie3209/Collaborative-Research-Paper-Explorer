@@ -1,3 +1,4 @@
+const BASE_URL = (import.meta.env.VITE_API_URL ?? "https://adventurous-upliftment-production.up.railway.app").replace(/\/$/, "");
 // src/components/figure/FigureExplainPanel.jsx
 // Phase 7.5.1 — Full UX redesign of AI explanation panel.
 //
@@ -20,7 +21,7 @@ const MODE_CONFIG = {
 };
 
 async function fetchExplanation(figure, mode, signal, forceRegenerate = false) {
-  const res = await fetch("/api/v1/figure/explain", {
+  const res = await fetch(`${BASE_URL}/api/v1/figure/explain`, {
     method:  "POST",
     headers: { "Content-Type": "application/json" },
     signal,

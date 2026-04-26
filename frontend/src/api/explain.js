@@ -2,7 +2,7 @@
 // Phase 4: updated to consume structured response { answer, source_chunks, confidence }
 // (backend /explain-selection now returns this shape instead of { explanation })
 
-const BASE_URL = import.meta.env.VITE_API_URL ?? "https://adventurous-upliftment-production.up.railway.app";
+const BASE_URL = (import.meta.env.VITE_API_URL ?? "https://adventurous-upliftment-production.up.railway.app").replace(/\/$/, "");
 
 /**
  * Send selected PDF text for plain-English explanation.

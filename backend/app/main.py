@@ -19,11 +19,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(upload_router)
-app.include_router(chat_router)
-app.include_router(explain_router)
-app.include_router(figure_router)                                      # Phase 7.2
-app.include_router(figure_explain_router)                                # Phase 7.5.1
+app.include_router(upload_router, prefix="/api/v1")
+app.include_router(chat_router, prefix="/api/v1")
+# also add for explain if exists
+app.include_router(explain_router, prefix="/api/v1")
+app.include_router(figure_router, prefix="/api/v1")                                      # Phase 7.2
+app.include_router(figure_explain_router, prefix="/api/v1")                                # Phase 7.5.1
 
 app.mount("/uploaded_papers", StaticFiles(directory="uploaded_papers"), name="uploaded_papers")
 app.mount("/static", StaticFiles(directory="static"), name="static")   # Phase 7.2

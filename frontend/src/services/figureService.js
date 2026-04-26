@@ -2,7 +2,7 @@
 // Phase 7.5.2 — Attach session-scoped pdf_url to every normalised figure
 // so FigureModal can build page-anchored PDF links without global state.
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+const API_BASE = (import.meta.env.VITE_API_URL ?? "https://adventurous-upliftment-production.up.railway.app").replace(/\/$/, "");
 
 /**
  * Converts a relative static path to a fully-qualified URL.

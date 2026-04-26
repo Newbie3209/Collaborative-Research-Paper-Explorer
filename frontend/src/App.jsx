@@ -1,3 +1,5 @@
+const BASE_URL = import.meta.env.VITE_API_URL.replace(/\/$/, "");
+
 // 🔥 EXISTING IMPORTS (unchanged)
 import { useState, useCallback, useRef, useEffect } from "react";
 import UploadPanel    from "./components/UploadPanel";
@@ -92,8 +94,8 @@ const getPaperName = () => {
 
     try {
       const res = await fetch(
-        `http://127.0.0.1:8000/api/v1/citation-graph?session_id=${sessionId}`
-      );
+    `${BASE_URL}/api/v1/citation-graph?session_id=${sessionId}`
+    );
 
       const data = await res.json();
       setGraphData(data);

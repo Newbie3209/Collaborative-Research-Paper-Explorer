@@ -66,7 +66,7 @@ from app.routes.chat_routes import _get_or_create_session
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/api/v1", tags=["Figures"])
+router = APIRouter(tags=["Figures"])
 
 # Module-level singleton — stateless, safe to share across all requests.
 _refiner = FigureRefiner()

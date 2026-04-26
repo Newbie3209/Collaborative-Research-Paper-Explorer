@@ -63,7 +63,7 @@ from app.services.figure_explain_service import explain_service
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/api/v1", tags=["Figures"])
+router = APIRouter(tags=["Figures"])
 
 
 # ---------------------------------------------------------------------------

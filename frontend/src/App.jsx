@@ -264,7 +264,7 @@ const getPaperName = () => {
 
             {/* 🔥 NEW: MY PAPERS SECTION */}
             <div className="sidebar-section">
-              <p className="section-label">MY PAPERS</p>
+              <p className="section-label">Upload PAPERS</p>
               {papers.map((paper) => (
                 <div
                   key={paper.id}

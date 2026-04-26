@@ -12,7 +12,7 @@ const BASE_URL = import.meta.env.VITE_API_URL ?? "https://adventurous-upliftment
  * @returns {Promise<{ answer: string, source_chunks: string[], confidence: number }>}
  */
 export async function explainSelection(selectedText, model = "groq") {
-  const res = await fetch(`${BASE_URL}/explain-selection`, {
+  const res = await fetch(`${BASE_URL}/api/v1/explain-selection`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

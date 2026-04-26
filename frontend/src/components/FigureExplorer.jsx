@@ -147,6 +147,7 @@ export default function FigureExplorer({ onExplain, onGoToPDF }) {
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [selectedFig, filtered]);
+  
 
   // ── Handlers ──────────────────────────────────────────────────────────────
   function handleExplain(id) {

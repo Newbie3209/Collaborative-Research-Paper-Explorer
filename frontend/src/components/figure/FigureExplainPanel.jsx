@@ -1,4 +1,4 @@
-const BASE_URL = (import.meta.env.VITE_API_URL ?? "https://adventurous-upliftment-production.up.railway.app").replace(/\/$/, "");
+const BASE_URL = import.meta.env.VITE_API_URL.replace(/\/$/, "");
 // src/components/figure/FigureExplainPanel.jsx
 // Phase 7.5.1 — Full UX redesign of AI explanation panel.
 //

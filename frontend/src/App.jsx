@@ -31,6 +31,7 @@ export default function App() {
   // 🔥 NEW STATES (ADDED)
   const [papers, setPapers] = useState([]);
   const [selectedPaper, setSelectedPaper] = useState(null);
+  
 
   // 📄 EXISTING STATES
   const [uploadedFile, setUploadedFile] = useState(null);
@@ -106,6 +107,11 @@ const getPaperName = () => {
 
     setGraphLoading(false);
   };
+
+  useEffect(() => {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("arxivmind_theme", theme);
+}, [theme]);
 
   // ── EXPLAIN (unchanged)
   const handleExplainRequest = useCallback(
@@ -467,9 +473,9 @@ const getPaperName = () => {
         <ModelSelector model={model} onChange={setModel} />
       </aside>
 
-      <div className="workspace">
-        <h2>Upload a paper to begin</h2>
-      </div>
+      <div className="workspace workspace--home">
+  <EmptyState />
+</div>
     </div>
   );
 }

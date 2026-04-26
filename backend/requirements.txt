@@ -108,6 +108,7 @@ einops==0.8.1
 et_xmlfile @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/et_xmlfile_1729053960370/work
 evalidate @ file:///C:/b/abs_573nc1ymt6/croot/evalidate_1743606028415/work
 executing @ file:///opt/conda/conda-bld/executing_1646925071911/work
+--extra-index-url https://download.pytorch.org/whl/cpu
 faiss-cpu==1.13.0
 fastapi==0.135.2
 fastjsonschema @ file:///C:/Users/dev-admin/buildout/croot/python-fastjsonschema_1735843385211/work

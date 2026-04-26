@@ -449,7 +449,7 @@ const getPaperName = () => {
 
         {/* 🔥 NEW: SHOW PAPERS EVEN BEFORE UPLOAD */}
         <div className="sidebar-section">
-          <p className="section-label">MY PAPERS</p>
+          <p className="section-label">Upload PAPERS</p>
           {papers.map((paper) => (
             <div
               key={paper.id}

@@ -33,7 +33,7 @@ ALLOWED_CONTENT_TYPES = {"application/pdf"}
 MAX_FILE_SIZE_MB = 20
 MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024
 
-router = APIRouter(prefix="/api/v1", tags=["Upload"])
+router = APIRouter(tags=["Upload"])
 
 
 # ---------------------------------------------------------------------------

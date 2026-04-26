@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL ?? "https://adventurous-upliftment-production.up.railway.app";
+const BASE_URL = (import.meta.env.VITE_API_URL ?? "https://adventurous-upliftment-production.up.railway.app").replace(/\/$/, "");
 
 /**
  * Send a question to the RAG chat endpoint.
@@ -11,7 +11,7 @@ export async function sendQuestion(question, model) {
   // 🔥 MUST be outside fetch
   const session_id = localStorage.getItem("session_id") || null;
 
-  const res = await fetch(`${BASE_URL}/chat`, {
+  const res = await fetch(`${BASE_URL}/api/v1/chat`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
